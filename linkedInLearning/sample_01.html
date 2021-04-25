@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="base.css" rel="stylesheet">
+
+    <script>
+        window.addEventListener("load", function(){
+            var theCanvas = document.getElementById('canvas_0');
+
+            /*      Checks if the canvas exists and has a context       */
+            if (theCanvas && theCanvas.getContext){
+
+                theCanvas.width = 150;
+                theCanvas.height = 150;
+
+                var ctx = theCanvas.getContext("2d");
+                if (ctx){
+
+                    /*      Changes the style of the canvas     */
+                    ctx.fillStyle = "lightBlue";
+                    ctx.strokeStyle = "blue";
+                    ctx.lineWidth = 5;
+
+                    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                    ctx.strokeRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                }
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1>First Canvas Example</h1>
+    <div id = "content">
+        <p>This document contains our first canvas example</p>
+        <canvas id = "canvas_0" width="400" height="300">
+            This browser does not support canvas
+        </canvas>
+    </div>
+</body>
+</html>

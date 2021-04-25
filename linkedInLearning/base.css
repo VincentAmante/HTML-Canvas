@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap');
+
+body {
+    background-color: #d0d0d0;
+    padding: 10px;
+    padding-left: 20px;
+
+    font-family: 'Jost', sans-serif;
+}
+
+/*      Default formatting for a canvas     */
+canvas {
+    border: thin solid black;
+}
