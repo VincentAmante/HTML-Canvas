@@ -15,24 +15,15 @@
             if (theCanvas && theCanvas.getContext){
                 var ctx = theCanvas.getContext("2d");
                 if (ctx){
-                    // Stroked Rectangle
-                    ctx.strokeStyle = "blue";
-                    ctx.lineWidth = 5;
-                    ctx.strokeRect(25, 25, 100, 125);
-
-                    // Filled Rectangle
-                    ctx.fillStyle = "green";
-                    ctx.fillRect(175,25,100,125);
-
-                    // Stroked and Filled Rectangle
-                    ctx.strokeStyle = "red";
-                    ctx.fillStyle = "yellow";
-                    ctx.lineWidth = 10;
-                    ctx.fillRect(325, 25, 100, 125);
-                    ctx.strokeRect(325, 25, 100, 125);
-
-                    // Clear Rect
-                    ctx.clearRect(15, 75, 450, 50);
+                    
+                    // Lines of varying strokes
+                    for (var i = 0; i < 10; i++){
+                        ctx.beginPath();
+                        ctx.lineWidth = i + 1;
+                        ctx.moveTo(25, 25 + i * 15);
+                        ctx.lineTo(475, 25 + i * 15)
+                        ctx.stroke();
+                    }
                 }
             }
         })
@@ -41,8 +32,22 @@
 <body>
     <h1>First Canvas Example</h1>
     <div id = "content">
-        <p>This document contains our first canvas example</p>
         <canvas id = "canvas_0" width="500" height="300">
+            This browser does not support canvas
+        </canvas>
+
+        
+        <canvas id = "canvas_1" width="500" height="300">
+            This browser does not support canvas
+        </canvas>
+
+        
+        <canvas id = "canvas_2" width="500" height="300">
+            This browser does not support canvas
+        </canvas>
+
+        
+        <canvas id = "canvas_3" width="500" height="300">
             This browser does not support canvas
         </canvas>
     </div>

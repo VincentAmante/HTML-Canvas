@@ -9,21 +9,43 @@
 <body>
     <canvas id = "myCanvas"
             width = "500"
-            height="400"
-            style="border: 1px solid black;">
+            height="700"
+            style="border: 1px solid red;">
     </canvas>
 
     <script>
-    var canvas = document.getElementById("myCanvas");
+        var canvas = document.getElementById("myCanvas"); //finding the canvas id
+        var ctx = canvas.getContext("2d"); //drawing object inside canvas
+
+        ctx.fillStyle = "#12ffee"; //color
+        ctx.fillRect(12, 15, 150,75); //each side value of distance from border.
+    </script>
+
+    <canvas id = "secondCanvas"
+            width= "500"
+            height= "700"
+            style = "border: 1px solid red;">
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("secondCanvas");
+        var txt = canvas.getContext("2d");
+        txt.font = 'italic 40pt calibri';
+        txt.fillText('Bath Spa University', 50, 100);
+    </script>
+
+    <canvas id = "thirdCanvas"
+    width= "500"
+    height= "700"
+    style = "border: 1px solid red;">
+    </canvas>
+
+    <script>
+    var canvas = document.getElementById("thirdCanvas");
     var txt = canvas.getContext("2d");
-
-    var x = canvas.width / 2;
-    var y = canvas.height / 2;
-
-    txt.font = '30pt calibri';
-    txt.textAlign = 'center';
-    txt.fillStyle = 'blue';
-    txt.fillText('Hello Students', x, y);
+    txt.font = 'italic 40pt calibri';
+    txt.fillStyle = 'skyblue';
+    txt.fillText('Bath Spa University', 50, 100);
     </script>
 </body>
 </html>

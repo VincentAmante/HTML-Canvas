@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "linkedInLearning/base.css" rel="stylesheet">
+</head>
+<body>
+    <canvas id="mycanvas" width="500" height="400" style="border:1px solid red"></canvas>
+    <script>
+    
+    var canvas = document.getElementById("mycanvas");
+    var txt = canvas.getContext("2d"); 
+    var recwidth = 200;
+    var recheight = 75;
+    txt.translate(canvas.width / 2, canvas.height / 2);
+    txt.fillStyle='blue'; 
+    txt.fillRect(recwidth/-2, recheight/-2, recwidth, recheight); 
+    
+    </script>
+</body>
+</body>
+</html>
